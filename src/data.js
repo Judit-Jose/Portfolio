@@ -6,7 +6,7 @@ export const resumeData = {
         email: "juditjose.pdve@gmail.com",
         phone: "+91-95-62-640-620",
         location: "Bangalore, India",
-        linkedin: "#", // Placeholder as not provided
+        linkedin: "www.linkedin.com/in/judit-jose",
         github: "#"   // Placeholder as not provided
     },
     experience: [
