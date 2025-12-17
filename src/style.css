@@ -1,0 +1,430 @@
+:root {
+  /* Color Palette - Minimalist Light */
+  --bg-color: #ffffff;
+  --text-primary: #111111;
+  --text-secondary: #555555;
+  --accent-color: #000000;
+  /* Strong contrast */
+  --card-bg: #ffffff;
+  --card-border: #e5e5e5;
+  --nav-bg: #ffffff;
+  --button-bg: #000000;
+  --button-text: #ffffff;
+
+  /* Typography */
+  --font-main: 'Inter', sans-serif;
+  /* Clean Sans-Serif */
+  --font-mono: 'Fira Code', monospace;
+
+  /* Spacing */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+  --nav-height: 80px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--text-secondary);
+}
+
+ul {
+  list-style: none;
+}
+
+/* Utilities */
+.container {
+  max-width: 900px;
+  /* Slightly tighter container for readability */
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.section {
+  padding: 80px 0;
+  opacity: 1;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+/* Ensure container text logic */
+.section .container {
+  text-align: left;
+  /* Reset alignment for general content */
+}
+
+/* Re-center specific elements that need it */
+.hero-section {
+  text-align: center;
+}
+
+.contact-box {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Navbar - Floating Pill */
+#navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  z-index: 100;
+  background: var(--nav-bg);
+  padding: 10px 30px;
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  /* Soft shadow */
+  border: 1px solid #f0f0f0;
+}
+
+.nav-container {
+  display: flex;
+  gap: 30px;
+  width: auto;
+  padding: 0;
+}
+
+.logo {
+  display: none;
+  /* Minimalist doesn't need strictly a logo text here if we have links */
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.nav-links a.cta-nav {
+  background: var(--button-bg);
+  color: var(--button-text);
+  padding: 6px 18px;
+  border-radius: 20px;
+}
+
+.nav-links a:hover {
+  color: #888;
+}
+
+.nav-links a.cta-nav:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.hero-profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero-intro {
+  display: none;
+}
+
+.hero-name {
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  letter-spacing: -1.5px;
+  max-width: 800px;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.cta-button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 12px 28px;
+  border-radius: 8px;
+  /* Slightly rounded */
+  font-weight: 600;
+  font-size: 15px;
+  display: inline-block;
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--text-primary);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button.secondary:hover {
+  background: #f9f9f9;
+}
+
+
+/* Content Layouts */
+.about-text {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+/* Experience */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.job-card {
+  padding: 0;
+  background: transparent;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 30px;
+}
+
+.job-card:last-child {
+  border-bottom: none;
+}
+
+.job-header {
+  margin-bottom: 10px;
+}
+
+.job-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.job-role-company {
+  display: block;
+  /* Stack on mobile, inline on desktop handled below */
+}
+
+.job-duration {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+}
+
+.job-details li {
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+  list-style-type: disc;
+  margin-left: 20px;
+  text-align: left;
+  /* Strict left align */
+  line-height: 1.7;
+  /* Improved readability */
+}
+
+/* Skills */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skill-category {
+  /* Hide category containers visual style, just flow tags */
+  display: contents;
+}
+
+.category-title {
+  display: none;
+  /* Minimalist: just show the cloud of skills or group subtly */
+}
+
+/* Let's keep categories but make them minimal lists */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  text-align: left;
+}
+
+.skill-category {
+  display: block;
+}
+
+.category-title {
+  display: block;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  color: var(--text-primary);
+  border-bottom: 1px solid #111;
+  padding-bottom: 5px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.skill-tag {
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+/* Education */
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.edu-card {
+  border: 1px solid #eee;
+  padding: 25px;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.edu-card:hover {
+  border-color: #000;
+}
+
+.edu-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.edu-degree {
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.edu-meta {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Contact */
+.contact-box {
+  text-align: center;
+}
+
+.contact-box p {
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+}
+
+.footer {
+  text-align: center;
+  padding: 40px;
+  border-top: 1px solid #eee;
+  margin-top: 80px;
+  color: #888;
+
+  font-size: 13px;
+}
+
+/* Company Logo Styles */
+.job-company-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 5px;
+}
+
+.company-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 8px;
+  /* Soft rounding */
+  background: #f9f9f9;
+  /* Subtle backing for contrast if needed */
+  padding: 5px;
+  border: 1px solid #eee;
+}
+
+.job-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.company-at {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
