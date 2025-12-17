@@ -1,7 +1,7 @@
 export const resumeData = {
     name: "Judit Jose",
     role: "Java Backend Application Developer",
-    summary: "Software Developer with 5+ years of experience in Java and Spring Boot. Proven track record of successfully contributing to the development of innovative solutions in fast-paced work environments. Skilled in Kafka, Microservices, and Automation.",
+    summary: "Senior Java Backend Developer with over 5 years of experience specializing in building scalable backend systems and cloud architecture. Currently driving ETL optimization and data migration projects at Fulcrum Digital for Mastercard. Proven expertise in Microservices, Kafka, and Spring Boot, with a strong background in developing robust banking application frameworks at TCS and FIS. Adept at rapid problem-solving and delivering innovative automation solutions in agile environments.",
     contact: {
         email: "juditjose.pdve@gmail.com",
         phone: "+91-95-62-640-620",
