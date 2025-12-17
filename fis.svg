@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <rect width="200" height="100" fill="#ffffff"/>
+  <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="70" fill="#4d4d4d">fis</text>
+  <rect x="135" y="30" width="10" height="10" fill="#8bc53f"/> 
+  <!-- Stylized square dot often associated with FIS -->
+</svg>
