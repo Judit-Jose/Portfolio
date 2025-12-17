@@ -47,7 +47,6 @@ function renderAbout() {
   content.innerHTML = `
     <div class="about-text">
       <p>${resumeData.summary}</p>
-      <p>I enjoy creating things that live on the internet. My interest in web development started back in 2016 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!</p>
     </div>
   `;
 }
