@@ -12,7 +12,7 @@ export const resumeData = {
     experience: [
         {
             company: "Fulcrum Digital Pvt Ltd",
-            logo: "/fulcrum.png",
+            logo: "fulcrum.png",
             role: "Senior Software Engineer Delivery",
             duration: "July 2025 Present",
             location: "Pune, India",
@@ -24,7 +24,7 @@ export const resumeData = {
         },
         {
             company: "Tata Consultancy Services",
-            logo: "/tcs.png",
+            logo: "tcs.png",
             role: "Developer II",
             duration: "Jan 2023 – July 2025",
             location: "Bangalore, India",
@@ -39,7 +39,7 @@ export const resumeData = {
         },
         {
             company: "Fidelity National Information Services (FIS)",
-            logo: "/fis.png",
+            logo: "fis.png",
             role: "Software Engineer",
             duration: "October 2020 – Jan 2023",
             location: "Bangalore, India",
