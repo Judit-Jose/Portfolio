@@ -31,7 +31,7 @@ function renderHero() {
   // Let's refine the headline dynamically to be safe:
   hero.innerHTML = `
     <div class="container">
-      <img src="/profile.jpg" alt="${resumeData.name}" class="hero-profile-img">
+      <img src="profile.jpg" alt="${resumeData.name}" class="hero-profile-img">
       <h1 class="hero-name">${resumeData.role} focusing on scalable backend systems and cloud architecture</h1>
       <p class="hero-subtitle">${resumeData.summary}</p> 
       <div class="hero-buttons">
