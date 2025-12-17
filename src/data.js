@@ -70,10 +70,10 @@ export const resumeData = {
         }
     ],
     skills: {
-        languages: ["Core Java 8 & 17", "SQL (MYSQL, Oracle)", "Shell Scripting"],
-        frameworks: ["Spring Boot", "Kafka", "J2EE", "Angular", "Taiko", "Hibernate"],
-        tools: ["Git", "SVN", "Maven", "Docker", "Postman", "JUnit & Mockito", "JIRA"],
-        web: ["HTML/CSS", "JSON", "XML", "REST Web Services"],
-        others: ["Problem Solving", "Creativity", "Agile/Scrum", "Linux/Solaris"]
+        languages: ["Java (8, 17)", "SQL", "PL/SQL", "Shell Scripting"],
+        frameworks: ["Spring Boot", "Microservices", "Kafka", "Hibernate", "Angular", "Taiko", "Jakarta EE"],
+        tools: ["Git", "Maven", "Docker", "Postman", "JIRA", "JUnit", "Mockito", "SVN"],
+        web: ["HTML5", "CSS3", "JSON", "XML", "REST APIs"],
+        "soft skills": ["Problem Solving", "Agile / Scrum", "System Design", "Technical Leadership"]
     }
 };
